@@ -24,6 +24,9 @@
 
    ```bash
    pip install scapy requests mitmproxy
+   chmod +x lunisecx.py
+   sudo ./lunisecx.py --help
+
 
 2. **LunisecX aracını indirin:**
 
@@ -50,10 +53,18 @@ Ağ taraması, belirli bir IP aralığındaki cihazları tespit etmek için kull
 
 6. **Aracı Çalıştırın:**
    ```bash
-    python3 lunisecx.py -n <TARGET_NETWORK>
-    python3 lunisecx.py -w <TARGET_URL>
-    python3 lunisecx.py -t
-    python3 lunisecx.py --manual
+    Kullanım:
+   -n, --network <CIDR/IP>        Ağ taraması yapar
+   -w, --web <URL>                Web uygulaması keşfi + zafiyet testi
+   --wordlist <file>              URL keşfi için wordlist
+   --ports <range>                Port aralığı (örn: 1-1000)
+   --udp                          UDP port taraması
+   -t, --traffic <port>           Trafik analizi başlatır
+   --filter <bpf>                 Sniffer filtresi (örn: 'tcp port 80')
+   --pcap <file>                  Yakalanan trafiği .pcap olarak kaydeder
+   --output <file>                Raporu json veya txt olarak dışa aktarır
+   --version                      Sürüm bilgisini gösterir
+   --help                         Yardım ekranı
 
 6. **İçerik:**
  
